@@ -9,15 +9,23 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- defer or async in the script tag -->
     <script src="main.js" defer></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
-    <header>
-      <ul class="nav justify-content-end">
+    <nav>
+      <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link" href="#home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="projects">Projects</a>
+          <a class="nav-link" href="#projects">Projects</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#additional-info">Additional Information</a>
@@ -26,58 +34,50 @@
           <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
-    </header>
+      <button class="burger-menu" id="burger-menu">
+        <ion-icon class="bars" name="menu-outline"></ion-icon>
+      </button>
+    </nav>
     
     <body>
-    <section id="home">
-      <h2>Hi, my name is Hunter Bury and I'm a full stack web developer.</h2>
+    <section id="home" class="home">
+      <h1>HUNTER BURY</h1>
+      <h5>FULL-STACK DEVELOPER</h5>
     </section>
 
-    <section id="portfolio" class="container">
-      <h1>Portfolio<h1>
-      <div class="row">
-        <div class="column">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="">
-            <div class="card-body">
-              <h5 class="card-title">Ecommerce website</h5>
-              <span class="badge badge-pill badge-light">HTML</span>
-              <span class="badge badge-pill badge-dark">CSS</span>
-              <a href="#" class="btn btn-primary">Source code</a>
-              <a href="#" class="btn btn-primary">Demo</a>
-            </div>
-          </div>
+    <section id="projects" class="projects">
+      <h1 class="projects-title">PROJECTS<h1>
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <img class="project-pic" src="" alt="" />
+          <h5 class="project-title">Ecommerce website</h5>
+          <img src="assets/icons/icons8-python.svg" class="icon icon-card" />
+          <img src="assets/icons/icons8-javascript.svg" class="icon icon-card" /><br>
+          <a href="https://github.com/hunterbury/ecommerce" class="project-link">Source code</a>
+          <a href="#" class="project-link">Demo</a>
         </div>
-        <div class="column">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="">
-            <div class="card-body">
-              <h5 class="card-title">Spotify website</h5>
-              <span class="badge badge-pill badge-light">HTML</span>
-              <span class="badge badge-pill badge-dark">CSS</span>
-              <a href="#" class="btn btn-primary">Source code</a>
-              <a href="#" class="btn btn-primary">Demo</a>
-            </div>
-          </div>
 
-        </div>
-        <div class="column">
-
-        </div>
-        <div class="column">
-
+        <div class="project-container project-card">
+          <img class="project-pic" src="assets/project-pics/pomodoro.png" alt="">
+          <h5 class="project-title">Pomodoro Clock</h5>
+          <img src="assets/icons/icons8-react.svg" class="icon icon-card" /><br>
+          <a href="https://github.com/hunterbury/pomodoro" class="project-link">Source code</a>
+          <a href="#" class="project-link">Demo</a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="footer">
       <div class="logos">
-        <a class="fab fa-github" href="https://github.com/hunterbury"></a>
-        <a class="fab fa-free-code-camp" href="https://www.freecodecamp.org/hunterbury"></a>
-        <a class="fas fa-envelope" href="mailto:huntersbury1@gmail.com"></a>
-        <a href="resume.docx" download="HunterBuryResume">Resume</a>
+        <a class="logo fab fa-github" href="https://github.com/hunterbury"></a>
+        <a class="logo fab fa-free-code-camp" href="https://www.freecodecamp.org/hunterbury"></a>
+        <a class="logo fas fa-envelope" href="mailto:huntersbury1@gmail.com"></a>
       </div>
-    </div>
-
   </body>
+
+  <footer>
+          <p class="copy">&copy; Copyright 2021</p>
+          <p class="copy">
+            Built by Hunter Bury
+          </p>
+    </footer>
 </html>

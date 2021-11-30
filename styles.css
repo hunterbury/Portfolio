@@ -1,28 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+:root {
+    --font-family: "Roboto", sans-serf;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+  
+nav a {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+
+nav ul li {
+    font-weight: var(--bold-font);
+    font-size: 14px;
+}
+
+.burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.home {
+    text-align: center;
+}
+
+.projects {
+    background-color: var(--bg-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+    margin-right: 3rem;
+}
+
+.projects-title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+.project-container {
+    text-align: center;
+    width: 21.875rem;
+    height: 20rem;
+    padding: 1rem;
+  }
+  
+.project-pic {
+    width: 100%;
+    height: 60%;
+}
+  
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-title {
+    margin-bottom: var(--bottom-margin);
+}
+  
+.project-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: 10px;
+}
+
+.icon {
+    width: 5rem;
+    height: 5rem;
+}
+
+.icon-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 0px;
+    margin: 5px;
+}
+
+.project-link {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: var(--bold-font);
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+}
 
 .logos {
-    display: block;
-    padding: 10px;
-    margin: 0px auto;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 50%;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 2rem;
+    height: 2rem;
 }
 
-.badge {
-    background-color: #ddd;
-    border: none;
-    color: black;
-    padding: 10px 20px;
+footer {
+    background-color: var(--bg-color);
+    padding: 1.25rem;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    border-radius: 16px;
-}
-
-.footer {
-    align-items: center;
+    margin: 2rem 0 0;
+    font-family: var(--font-family);
+    font-size: 10px;
 }
