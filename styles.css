@@ -54,6 +54,7 @@ nav {
     padding: 1.5rem 3.5rem;
     background-color: var(--bg-color);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    height: 60px;
 }
   
 nav a {
@@ -86,7 +87,14 @@ nav ul li {
 }
 
 .home {
-    text-align: center;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1612538498456-e861df91d4d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=700&q=60);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover; 
+    margin-bottom: 30px;
 }
 
 .projects {
@@ -162,12 +170,73 @@ nav ul li {
     cursor: pointer;
 }
 
+.contact {
+    margin-top: 2rem;
+  }
+  
+.contact h2 {
+    text-align: center;
+    margin-bottom: var(--bottom-margin-2);
+}
+  
+.contact-form-container {
+    max-width: 40.75rem;
+    margin: 0 auto;
+    padding: 0.938rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+.contact-form-container label {
+    line-height: 2.7em;
+    font-weight: var(--bold-font);
+    color: var(--primary-color);
+}
+  
+.contact-form-container textarea {
+    min-height: 6.25rem;
+    font-size: 14px;
+}
+  
+.contact-form-container .input-field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 2px outset var(--primary-color);
+    font-size: 0.875rem;
+    outline: none;
+}
+
+.input-field::placeholder {
+    padding: 0.5rem;
+    color: var(--primary-color);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: var(--bold-font);
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+}
+
 .logos {
     display: flex;
-    flex-direction: column;
-    position: fixed;
-    right: 1%;
-    bottom: 50%;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .logo {
@@ -175,11 +244,24 @@ nav ul li {
     height: 2rem;
 }
 
-footer {
+.copy {
     background-color: var(--bg-color);
-    padding: 1.25rem;
+    padding: .5rem;
     text-align: center;
-    margin: 2rem 0 0;
+    margin: 5px;
     font-family: var(--font-family);
     font-size: 10px;
+}
+
+#down {
+ position: absolute;
+ top: 52vh;
+ font-size: 1.25em;
+ margin-top: 20px;
+}
+
+#down:hover {
+ cursor: pointer;
+ background-color: var(--primary-color);
+ opacity: 0.8;
 }
