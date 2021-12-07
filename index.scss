@@ -1,5 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin transition {
+    -moz-transition:    0.3s ease-in-out all;
+    -o-transition:      0.3s ease-in-out all;
+    -webkit-transition: 0.3s ease-in-out all;
+    transition:         0.3s ease-in-out all;
+}
+
+@mixin filter($filter) {
+   -webkit-filter: $filter;
+   -moz-filter: $filter;
+   -o-filter: $filter;
+}
+
+$sm: 480px;
+$md: 768px;
+$lg: 992px;
+
 :root {
     --font-family: "Roboto", sans-serf;
     --normal-font: 400;
