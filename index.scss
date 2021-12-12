@@ -148,19 +148,54 @@ nav ul.show {
     margin-left: 30px;
 }
 
+#name {
+    position: relative;
+    animation-name: name;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#developer {
+    position: relative;
+    animation-name: developer;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
 #down {
     position: absolute;
     top: 52vh;
     font-size: 1.25em;
     margin-top: 20px;
+    animation-name: down;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    transition-property: transform;
+    transition-duration: 1s;
 }
    
-   #down:hover {
+#down:hover {
     cursor: pointer;
     background-color: var(--primary-color);
     opacity: 0.8;
 }
 
+@keyframes name {
+    0% {top: -50px;}
+    100% {top: -10px;}
+}
+  
+@keyframes developer {
+    0% {left: -1000px;}
+    100% {left: 0px;}
+}
+  
+
+@keyframes down {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
 /* skills section */
 .skills {
     max-width: 68.75rem;

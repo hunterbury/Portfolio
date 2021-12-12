@@ -148,17 +148,105 @@ nav ul.show {
   margin-left: 30px;
 }
 
+#name {
+  position: relative;
+  -webkit-animation-name: name;
+          animation-name: name;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#developer {
+  position: relative;
+  -webkit-animation-name: developer;
+          animation-name: developer;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 #down {
   position: absolute;
   top: 52vh;
   font-size: 1.25em;
   margin-top: 20px;
+  -webkit-animation-name: down;
+          animation-name: down;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 #down:hover {
   cursor: pointer;
   background-color: var(--primary-color);
   opacity: 0.8;
+}
+
+@-webkit-keyframes name {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: -10px;
+  }
+}
+
+@keyframes name {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: -10px;
+  }
+}
+
+@-webkit-keyframes developer {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes developer {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* skills section */
