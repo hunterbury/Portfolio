@@ -44,7 +44,10 @@ $lg: 992px;
 html, body {
     scroll-behavior: smooth;
     font-family: var(--font-family);
-    background-color: var(--bg-color);
+    background: #C9D6FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     
 }
 
@@ -53,7 +56,7 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     color: white;
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
 }
 
 /* nav bar */
@@ -80,7 +83,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 3.5rem;
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     height: 60px;
 }
@@ -103,7 +106,7 @@ nav a:hover {
 
 nav ul {
     position: fixed;
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
     flex-direction: column;
     top: 86px;
     left: 10%;
@@ -134,7 +137,7 @@ nav ul.show {
 
 .home {
     height: 100vh;
-    background-image: url(https://wallpaper.dog/large/5438670.jpg);
+    // background-image: url(https://wallpaper.dog/large/5438670.jpg);
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -436,11 +439,11 @@ nav ul.show {
 /* contact section */
 .contact {
     padding-top: 2rem;
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
   }
 
 .contact-form {
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
 }
   
 .contact h2 {
@@ -453,7 +456,7 @@ nav ul.show {
     padding: 0.938rem;
     border-radius: 5px;
     box-shadow: 0 1px 6px var(--secondary-shadow);
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
     align-items: center;
     justify-self: center;
 }
@@ -461,14 +464,14 @@ nav ul.show {
 .contact-form-container label {
     line-height: 2.7em;
     font-weight: var(--bold-font);
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
     
 }
   
 .contact-form-container textarea {
     min-height: 6.25rem;
     font-size: 14px;
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
 }
   
 .contact-form-container .input-field {
@@ -480,7 +483,7 @@ nav ul.show {
     border: 2px outset var(--primary-color);
     font-size: 0.875rem;
     outline: none;
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
 }
 
 .input-field::placeholder {
@@ -492,7 +495,7 @@ nav ul.show {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
     border: 2px solid var(--primary-color);
     border-radius: 5px;
     font-size: 1rem;
@@ -511,7 +514,7 @@ nav ul.show {
     margin-right: 5px;
     bottom: 3%;
     cursor: pointer;
-    background-color: #0c0a0a;
+    // background-color: #0c0a0a;
 }
   
 .up-arrow {
@@ -532,7 +535,7 @@ nav ul.show {
 }
 
 .copy {
-    background-color: var(--bg-color);
+    // background-color: var(--bg-color);
     padding: .5rem;
     text-align: center;
     margin: 5px;

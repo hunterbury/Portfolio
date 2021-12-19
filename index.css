@@ -18,7 +18,12 @@
 html, body {
   scroll-behavior: smooth;
   font-family: var(--font-family);
-  background-color: var(--bg-color);
+  background: #C9D6FF;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#E2E2E2), to(#C9D6FF));
+  background: linear-gradient(to bottom, #E2E2E2, #C9D6FF);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 * {
@@ -27,7 +32,6 @@ html, body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: white;
-  background-color: var(--bg-color);
 }
 
 /* nav bar */
@@ -60,7 +64,6 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.5rem 3.5rem;
-  background-color: var(--bg-color);
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   height: 60px;
@@ -87,7 +90,6 @@ nav a:hover {
 
 nav ul {
   position: fixed;
-  background-color: var(--bg-color);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -125,7 +127,6 @@ nav ul.show {
 /* landing page */
 .home {
   height: 100vh;
-  background-image: url(https://wallpaper.dog/large/5438670.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -510,11 +511,6 @@ nav ul.show {
 /* contact section */
 .contact {
   padding-top: 2rem;
-  background-color: var(--bg-color);
-}
-
-.contact-form {
-  background-color: var(--bg-color);
 }
 
 .contact h2 {
@@ -528,7 +524,6 @@ nav ul.show {
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 6px var(--secondary-shadow);
           box-shadow: 0 1px 6px var(--secondary-shadow);
-  background-color: var(--bg-color);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -539,13 +534,11 @@ nav ul.show {
 .contact-form-container label {
   line-height: 2.7em;
   font-weight: var(--bold-font);
-  background-color: var(--bg-color);
 }
 
 .contact-form-container textarea {
   min-height: 6.25rem;
   font-size: 14px;
-  background-color: var(--bg-color);
 }
 
 .contact-form-container .input-field {
@@ -557,7 +550,6 @@ nav ul.show {
   border: 2px outset var(--primary-color);
   font-size: 0.875rem;
   outline: none;
-  background-color: var(--bg-color);
 }
 
 .input-field::-webkit-input-placeholder {
@@ -584,7 +576,6 @@ nav ul.show {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  background-color: var(--bg-color);
   border: 2px solid var(--primary-color);
   border-radius: 5px;
   font-size: 1rem;
@@ -604,7 +595,6 @@ nav ul.show {
   margin-right: 5px;
   bottom: 3%;
   cursor: pointer;
-  background-color: #0c0a0a;
 }
 
 .up-arrow {
@@ -632,7 +622,6 @@ nav ul.show {
 }
 
 .copy {
-  background-color: var(--bg-color);
   padding: .5rem;
   text-align: center;
   margin: 5px;
