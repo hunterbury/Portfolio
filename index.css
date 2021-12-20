@@ -18,11 +18,11 @@
 html, body {
   scroll-behavior: smooth;
   font-family: var(--font-family);
-  background: #C9D6FF;
+  background: #ECE9E6;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(#E2E2E2), to(#C9D6FF));
-  background: linear-gradient(to bottom, #E2E2E2, #C9D6FF);
+  background: -webkit-gradient(linear, left bottom, left top, from(#FFFFFF), to(#ECE9E6));
+  background: linear-gradient(to top, #FFFFFF, #ECE9E6);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -127,6 +127,7 @@ nav ul.show {
 /* landing page */
 .home {
   height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,6 +144,13 @@ nav ul.show {
   background-size: cover;
   padding-bottom: 30px;
   color: white;
+  font-family: Impact;
+  font-size: 60px;
+  padding-left: 30px;
+}
+
+.home span {
+  font-size: 30px;
 }
 
 .home h1, h5, span {
@@ -157,37 +165,6 @@ nav ul.show {
           animation-duration: 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-#developer {
-  position: relative;
-  -webkit-animation-name: developer;
-          animation-name: developer;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-#down {
-  position: absolute;
-  top: 52vh;
-  font-size: 1.25em;
-  margin-top: 20px;
-  -webkit-animation-name: down;
-          animation-name: down;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
 }
 
 #down:hover {
@@ -368,7 +345,7 @@ nav ul.show {
 }
 
 .section .title {
-  background: tomato;
+  background: #BBBAFF;
 }
 
 .section .title h2 {
@@ -382,7 +359,7 @@ nav ul.show {
 
 .section .title .btn-primary {
   color: #fff;
-  background: #ff3814;
+  background: #8987ff;
   padding: 10px;
   text-decoration: none;
   border-radius: 3px;
@@ -392,7 +369,7 @@ nav ul.show {
 }
 
 .section .title .btn-primary:hover {
-  background: #fa2600;
+  background: #706eff;
 }
 
 .section .tiles {
@@ -436,78 +413,10 @@ nav ul.show {
 
 .section .middle img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
-/*
-.projects {
-    background-color: var(--bg-color);
-    padding: 32px 0;
-   
-}
-
-.projects-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.projects-title {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-.project-container {
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
-  
-.project-pic {
-    max-width: 100%;
-    height: auto;
-}
-
-.project-title {
-    margin-bottom: var(--bottom-margin);
-}
-
-
-.icon {
-    width: 5rem;
-    height: 5rem;
-}
-
-.icon-card {
-    background-color:transparent;
-    border-radius: 11px;
-    padding: 0px;
-    margin: 5px;
-}
-
-.project-link {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: transparent;
-    border: 1px solid #79b3f5;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: var(--bold-font);
-    transition: var(--transition);
-}
-
-.project-link:hover {
-    background-color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    cursor: pointer;
-}
-*/
 /* contact section */
 .contact {
   padding-top: 2rem;

@@ -44,12 +44,10 @@ $lg: 992px;
 html, body {
     scroll-behavior: smooth;
     font-family: var(--font-family);
-    background: #C9D6FF;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    
-}
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
 
 * {
     margin: 0;
@@ -137,7 +135,7 @@ nav ul.show {
 
 .home {
     height: 100vh;
-    // background-image: url(https://wallpaper.dog/large/5438670.jpg);
+    background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80) ;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -145,6 +143,13 @@ nav ul.show {
     background-size: cover; 
     padding-bottom: 30px;
     color:white;
+    font-family: Impact;
+    font-size: 60px;
+    padding-left: 30px;
+
+    span {
+        font-size: 30px;
+    }
 }
 
 .home h1, h5, span {
@@ -158,25 +163,6 @@ nav ul.show {
     animation-fill-mode: forwards;
 }
 
-#developer {
-    position: relative;
-    animation-name: developer;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-}
-
-#down {
-    position: absolute;
-    top: 52vh;
-    font-size: 1.25em;
-    margin-top: 20px;
-    animation-name: down;
-    animation-duration: 3s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    transition-property: transform;
-    transition-duration: 1s;
-}
    
 #down:hover {
     cursor: pointer;
@@ -302,7 +288,7 @@ nav ul.show {
     }
     
     .title {
-       background: tomato;
+       background: #BBBAFF;
        
        h2 {
           margin-top:0;
@@ -315,7 +301,7 @@ nav ul.show {
        
        .btn-primary {
           color: #fff;
-          background: darken(tomato, 10%);
+          background: darken(#BBBAFF, 10%);
           padding: 10px;
           text-decoration:none;
           border-radius: 3px;
@@ -323,7 +309,7 @@ nav ul.show {
           @include transition;
           
           &:hover {
-             background: darken(tomato, 15%);
+             background: darken(#BBBAFF, 15%);
           }
           
        }
@@ -363,79 +349,12 @@ nav ul.show {
        
        img {
           width: 100%;
-          height: auto;
+          height: 100%;
           display:block;
        }
     }
  }
-/*
-.projects {
-    background-color: var(--bg-color);
-    padding: 32px 0;
-   
-}
 
-.projects-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.projects-title {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-.project-container {
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
-  
-.project-pic {
-    max-width: 100%;
-    height: auto;
-}
-
-.project-title {
-    margin-bottom: var(--bottom-margin);
-}
-
-
-.icon {
-    width: 5rem;
-    height: 5rem;
-}
-
-.icon-card {
-    background-color:transparent;
-    border-radius: 11px;
-    padding: 0px;
-    margin: 5px;
-}
-
-.project-link {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: transparent;
-    border: 1px solid #79b3f5;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: var(--bold-font);
-    transition: var(--transition);
-}
-
-.project-link:hover {
-    background-color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    cursor: pointer;
-}
-*/
 /* contact section */
 .contact {
     padding-top: 2rem;
