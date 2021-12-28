@@ -126,8 +126,9 @@ nav ul.show {
 
 /* landing page */
 .home {
+  position: relative;
+  width: 100vw;
   height: 100vh;
-  background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,12 +150,44 @@ nav ul.show {
   padding-left: 30px;
 }
 
-.home span {
-  font-size: 30px;
+.home::before {
+  background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: cover;
+  padding-bottom: 30px;
+  color: white;
+  font-family: Impact;
+  font-size: 60px;
+  padding-left: 30px;
 }
 
-.home h1, h5, span {
+.home-content {
+  position: relative;
   margin-left: 30px;
+}
+
+.home-content span {
+  font-size: 30px;
 }
 
 #name {
