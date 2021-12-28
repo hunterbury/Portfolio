@@ -191,73 +191,40 @@ nav ul.show {
 }
 
 #name {
-  position: relative;
-  -webkit-animation-name: name;
-          animation-name: name;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3.5s steps(30, end);
+          animation: typing 3.5s steps(30, end);
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 #down:hover {
   cursor: pointer;
   background-color: var(--primary-color);
   opacity: 0.8;
-}
-
-@-webkit-keyframes name {
-  0% {
-    top: -50px;
-  }
-  100% {
-    top: -10px;
-  }
-}
-
-@keyframes name {
-  0% {
-    top: -50px;
-  }
-  100% {
-    top: -10px;
-  }
-}
-
-@-webkit-keyframes developer {
-  0% {
-    left: -1000px;
-  }
-  100% {
-    left: 0px;
-  }
-}
-
-@keyframes developer {
-  0% {
-    left: -1000px;
-  }
-  100% {
-    left: 0px;
-  }
-}
-
-@-webkit-keyframes down {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes down {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 /* skills section */

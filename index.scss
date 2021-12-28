@@ -177,12 +177,19 @@ nav ul.show {
 }
 
 #name {
-    position: relative;
-    animation-name: name;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing 3.5s steps(30, end),
 }
 
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
    
 #down:hover {
     cursor: pointer;
@@ -190,21 +197,6 @@ nav ul.show {
     opacity: 0.8;
 }
 
-@keyframes name {
-    0% {top: -50px;}
-    100% {top: -10px;}
-}
-  
-@keyframes developer {
-    0% {left: -1000px;}
-    100% {left: 0px;}
-}
-  
-
-@keyframes down {
-    0%{opacity: 0}
-    100%{opacity: 1}
-}
 /* skills section */
 .skills {
     max-width: 68.75rem;
