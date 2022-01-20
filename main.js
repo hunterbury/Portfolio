@@ -74,6 +74,42 @@ function fadeIn(el, display) {
     })();
 };
 
+const submit = document.querySelector('#submit');
+const delay = ms => new Promise(res => setTimeout(res, ms));
+const checkContainer = document.querySelector('.check-container');
+const checkBackground = document.querySelector('.check-background');
+
+const successMessage = async () => {
+    document.getElementById('contact-form').style.display = 'none';
+
+    // Show thank you message element
+    checkContainer.style.display = 'flex';
+    checkBackground.style.display = 'flex';
+
+    await delay(3000);
+
+    document.getElementById('contact-form').reset();
+
+    document.getElementById('contact-form').style.display = 'grid';
+
+    // Show thank you message element
+    checkContainer.style.display = 'none';
+    checkBackground.style.display = 'none';
+  
+  };
+
+submit.addEventListener('click', successMessage);
+
+
+// const close = document.querySelector('#close');
+
+//   close.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     document.getElementById('success').style.display = 'none';
+
+//     document.getElementById('contact-form').style.display = 'grid';
+
+//   });
 // const arrow = document.getElementById("down");
 // const projects = document.getElementById("projects-title");
 // const nav = document.getElementById("nav");
