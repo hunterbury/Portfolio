@@ -40,24 +40,40 @@
         }
     </script>
   </head>
+  <header id="burger">
+    <input type='checkbox' id='toggle' style='display:none;' />
+    <label class='toggle-btn toggle-btn__cross' for='toggle'>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </label>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
   <body id="page-top">
     <!-- Navigation-->
-    <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+    <!-- <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand"><a href="#page-top">Hunter Bury | Dev</a></li>
             <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
-            <li class="sidebar-nav-item"><a href="#about">About</a></li>
-            <li class="sidebar-nav-item"><a href="#services">Services</a></li>
+            <li class="sidebar-nav-item"><a href="#skills">Skills</a></li>
             <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
+            <li class="sidebar-nav-item"><a href="#about">About</a></li>
             <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
+    </nav> -->
     <!-- Header-->
     <header class="masthead d-flex align-items-center">
         <div class="container px-4 px-lg-5 text-center">
-            <h1 class="mb-1">HUNTER BURY | FULL-STACK DEVELOPER</h1>
-            <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3>
+            <h3 id="name" class="mb-1">HUNTER BURY | FULL-STACK DEVELOPER</h3>
             <a class="btn btn-primary btn-xl" href="#portfolio">View my projects</a>
         </div>
     </header>
@@ -255,7 +271,7 @@
     </section>
     <!-- Call to Action-->
       <!--Section: Contact v.2-->
-<section class="mb-4">
+<section class="mb-4 contact">
 
   <!--Section heading-->
   <div class="row">
