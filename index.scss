@@ -172,6 +172,55 @@ $th_dark:#2a363b;
   }
 
 
+.masthead {
+  .container {
+    .home::before {
+      background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80);
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      filter: grayscale(100%);
+    }
+  }
+}
+
+// .site-wrap {
+// 	max-width: 700px;
+// 	margin: 100px auto;
+// 	background: white;
+// 	padding: 40px;
+// 	text-align: justify;
+// }
+
+.align-left {
+	float: left;
+	margin-right: 20px;
+}
+
+.align-right {
+	float: right;
+	margin-left: 20px;
+}
+
+.slide-in {
+	opacity: 0;
+	transition: all .5s;
+}
+
+.align-left.slide-in {
+	transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+	transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+	opacity: 1;
+	transform: translateX(0%) scale(1);
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -189,10 +238,15 @@ $th_dark:#2a363b;
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 5% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+  height: 80%;
+  h2 {
+    align-self: center;
+  }
+  
 }
 
 /* The Close Button */
@@ -340,6 +394,14 @@ $th_dark:#2a363b;
   from { width: 0 }
   to { width: 100% }
 }
+
+.callout {
+  height: 10vh;
+  h2, a {
+    align-self: center;
+    justify-self: center;
+  }
+}
    
 // #down:hover {
 //     cursor: pointer;
@@ -378,7 +440,7 @@ $th_dark:#2a363b;
 
 .main-container {
 	width: 100%;
-	height: 100vh;
+	height: auto;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
