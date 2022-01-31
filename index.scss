@@ -171,18 +171,52 @@ $th_dark:#2a363b;
     }
   }
 
+body {
+  overflow-x: hidden;
+}
 
 .masthead {
-  .container {
-    .home::before {
-      background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80);
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      filter: grayscale(100%);
-    }
+  .background {
+    width: 100vw;
+    height: 100vh;
+    background: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80);
+    background-size: cover;
+    background-position: center;  
   }
+
+  .container {
+    padding-left: 20px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+  }
+  // content: "";
+  // position: absolute;
+  // top: 0; left: 0;
+  // width: 100vw; height: 100vh;
+  // filter: grayscale(100%);
+}
+
+#name {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+      typing 3.5s steps(30, end),
+}
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+.callout {
+height: 10vh;
+h2, a {
+  align-self: center;
+  justify-self: center;
+}
 }
 
 // .site-wrap {
@@ -380,28 +414,6 @@ $th_dark:#2a363b;
 //     }
 // }
 
-#name {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-        typing 3.5s steps(30, end),
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-.callout {
-  height: 10vh;
-  h2, a {
-    align-self: center;
-    justify-self: center;
-  }
-}
    
 // #down:hover {
 //     cursor: pointer;
@@ -416,6 +428,32 @@ $th_dark:#2a363b;
 //     text-align: center;
 //     margin-top: 2.5rem;
 // }
+#skills {
+  .icon {
+    .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: black;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      
+      /* Position the tooltip text - see examples below! */
+      position: absolute;
+      z-index: 1;
+      width: 120px;
+      top: 100%;
+      left: 50%;
+      margin-left: -60px;
+    }
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .icon:hover .tooltiptext {
+    visibility: visible;
+  }
+}
   
 .skill-header {
     margin-bottom: 1rem;

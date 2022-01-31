@@ -126,16 +126,65 @@
           transform: translateY(-8px) rotate(-45deg);
 }
 
-.masthead .container .home::before {
-  background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80);
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+body {
+  overflow-x: hidden;
+}
+
+.masthead .background {
   width: 100vw;
   height: 100vh;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  background: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80);
+  background-size: cover;
+  background-position: center;
+}
+
+.masthead .container {
+  padding-left: 20px;
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+
+#name {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3.5s steps(30, end);
+          animation: typing 3.5s steps(30, end);
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.callout {
+  height: 10vh;
+}
+
+.callout h2, .callout a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .align-left {
@@ -225,47 +274,29 @@
   cursor: pointer;
 }
 
-#name {
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em;
-  /* Adjust as needed */
-  -webkit-animation: typing 3.5s steps(30, end);
-          animation: typing 3.5s steps(30, end);
+#skills {
+  /* Show the tooltip text when you mouse over the tooltip container */
 }
 
-/* The typing effect */
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-.callout {
-  height: 10vh;
+#skills .icon .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
 }
 
-.callout h2, .callout a {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+#skills .icon:hover .tooltiptext {
+  visibility: visible;
 }
 
 .skill-header {
