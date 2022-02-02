@@ -1,56 +1,18 @@
-window.addEventListener('DOMContentLoaded', event => {
-
-    const sidebarWrapper = document.getElementById('sidebar-wrapper');
-    let scrollToTopVisible = false;
-    // Closes the sidebar menu
-    const menuToggle = document.body.querySelector('.menu-toggle');
-    menuToggle.addEventListener('click', event => {
-        event.preventDefault();
-        sidebarWrapper.classList.toggle('active');
-        _toggleMenuIcon();
-        menuToggle.classList.toggle('active');
-    })
-
-    // Closes responsive menu when a scroll trigger link is clicked
-    var scrollTriggerList = [].slice.call(document.querySelectorAll('#sidebar-wrapper .js-scroll-trigger'));
-    scrollTriggerList.map(scrollTrigger => {
-        scrollTrigger.addEventListener('click', () => {
-            sidebarWrapper.classList.remove('active');
-            menuToggle.classList.remove('active');
-            _toggleMenuIcon();
-        })
-    });
-
-    function _toggleMenuIcon() {
-        const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
-        const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-times');
-        if (menuToggleBars) {
-            menuToggleBars.classList.remove('fa-bars');
-            menuToggleBars.classList.add('fa-times');
-        }
-        if (menuToggleTimes) {
-            menuToggleTimes.classList.remove('fa-times');
-            menuToggleTimes.classList.add('fa-bars');
-        }
-    }
-
-    // Scroll to top button appear
-    document.addEventListener('scroll', () => {
-        const scrollToTop = document.body.querySelector('.scroll-to-top');
-        if (document.documentElement.scrollTop > 100) {
-            if (!scrollToTopVisible) {
-                fadeIn(scrollToTop);
-                scrollToTopVisible = true;
-            }
-        } else {
-            if (scrollToTopVisible) {
-                fadeOut(scrollToTop);
-                scrollToTopVisible = false;
-            }
-        }
-    })
+//trigger tooltip
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
+//close nav when link is clicked
+const scrollTriggerList = [].slice.call(document.querySelectorAll('.scroll-trigger'));
+scrollTriggerList.map(scrollTrigger => {
+    scrollTrigger.addEventListener('click', () => {
+      toggle.click();
+    })
+});
+
+//project image slide-in
 function fadeOut(el) {
     el.style.opacity = 1;
     (function fade() {
@@ -66,7 +28,7 @@ function fadeIn(el, display) {
     el.style.opacity = 0;
     el.style.display = display || "block";
     (function fade() {
-        var val = parseFloat(el.style.opacity);
+        let val = parseFloat(el.style.opacity);
         if (!((val += .1) > 1)) {
             el.style.opacity = val;
             requestAnimationFrame(fade);
@@ -75,14 +37,14 @@ function fadeIn(el, display) {
 };
 
 function debounce(func, wait = 20, immediate = true) {
-	var timeout;
+	let timeout;
 	return function() {
-	  var context = this, args = arguments;
-	  var later = function() {
+	  let context = this, args = arguments;
+	  let later = function() {
 		timeout = null;
 		if (!immediate) func.apply(context, args);
 	  };
-	  var callNow = immediate && !timeout;
+	  let callNow = immediate && !timeout;
 	  clearTimeout(timeout);
 	  timeout = setTimeout(later, wait);
 	  if (callNow) func.apply(context, args);
@@ -92,9 +54,7 @@ function debounce(func, wait = 20, immediate = true) {
 const sliderImages = document.querySelectorAll('.slide-in', );
 function checkSlide(e) {
   sliderImages.forEach(sliderImage => {
-	//halfway through image
 	const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
-	//bottom of image
 	const imageBottom = sliderImage.offsetTop + sliderImage.height;
 	const isHalfShown = slideInAt > sliderImage.offsetTop;
 	const isNotScrolledPast = window.scrollY < imageBottom;
@@ -109,6 +69,7 @@ function checkSlide(e) {
 
 window.addEventListener('scroll', debounce(checkSlide));
 
+//contact form submission confirmation
 const submit = document.querySelector('#submit');
 const delay = ms => new Promise(res => setTimeout(res, ms));
 const checkContainer = document.querySelector('.check-container');
@@ -117,7 +78,6 @@ const checkBackground = document.querySelector('.check-background');
 const successMessage = async () => {
     document.getElementById('contact-form').style.display = 'none';
 
-    // Show thank you message element
     checkContainer.style.display = 'flex';
     checkBackground.style.display = 'flex';
 
@@ -127,7 +87,6 @@ const successMessage = async () => {
 
     document.getElementById('contact-form').style.display = 'grid';
 
-    // Show thank you message element
     checkContainer.style.display = 'none';
     checkBackground.style.display = 'none';
   
@@ -135,130 +94,44 @@ const successMessage = async () => {
 
 submit.addEventListener('click', successMessage);
 
-var modal = document.getElementById("myModal");
+const modals = document.getElementsByClassName("modal");
+const btns = document.getElementsByClassName("modalBtn");
+const spans = document.getElementsByClassName("close");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+[...btns].forEach((btn, ind) => {
+  btn.onclick = () => (modals[ind].style.display = 'block');
+});
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+[...spans].forEach((span, ind) => {
+  span.onclick = () => (modals[ind].style.display = 'none');
+});
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+window.onclick = (e) => {
+  [...modals].forEach((modal) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+}; 
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
 
-
-// const close = document.querySelector('#close');
-
-//   close.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     document.getElementById('success').style.display = 'none';
-
-//     document.getElementById('contact-form').style.display = 'grid';
-
-//   });
-// const arrow = document.getElementById("down");
-// const projects = document.getElementById("projects-title");
-// const nav = document.getElementById("nav");
-
-// arrow.addEventListener('click', () => {
-//   let rect = projects.getBoundingClientRect();
-//   let navHeight = nav.offsetHeight;
-//   window.scrollTo({ behavior: "smooth", top: rect.top - navHeight });
-// });
-
-// const scrollUp = document.querySelector("#scroll-up");
-
-// scrollUp.addEventListener("click", () => {
-//   window.scrollTo({
-//     top: 0,
-//     left: 0,
-//     behavior: "smooth",
-//   });
-// });
-
-// const burger = document.querySelector("#burger-menu");
-// const ul = document.querySelector("nav ul");
-
-// burger.addEventListener("click", () => {
-//   ul.classList.toggle("show");
-// });
-
-// const navLink = document.querySelectorAll(".nav-link");
-
-// navLink.forEach((link) =>
-//   link.addEventListener("click", () => {
-//     ul.classList.remove("show");
-//   })
-// );
-
-// $(document).ready(function(){
-
-//   var $sm = 480;
-//   var $md = 768;
-
-//   function resizeThis() {
-//      $imgH = $('.middle img').width();
-//      if ($(window).width() >= $sm) {
-//         $('.left,.right,.section').css('height', $imgH);
-//      } else {
-//         $('.left,.right,.section').css('height', 'auto');
-//      }
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
 //   }
+// }
 
-//   resizeThis();
+// //for loop  to map modal btn to modal for each project
+// const modalBtns = document.getElementsByClassName('modalBtn');
+// for (let i = 0; i < modalBtns.length; i++) {
+//   modalbtns[i]
+// }
+//or use .slice.call and then map like function above
 
-//   $(window).resize(function(){
-//      resizeThis();
-//   });
-
-//   $(window).scroll(function() {
-//      $('.section').each(function(){
-//         var $elementPos = $(this).offset().top;
-//         var $scrollPos = $(window).scrollTop();
-
-//         var $sectionH = $(this).height();
-//         var $h = $(window).height();
-//         var $sectionVert = (($h/2)-($sectionH/4));
-
-
-//         if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
-//            $(this).addClass('animate');
-//         } else {
-//            $(this).removeClass('animate');
-//         }
-//      });
-//   });
-
-//   $('.btn-primary').click(function(){
-//      alert('I lied');
-//   });
-// });
-
-// $(function() {
-//  $('a[href*="#"]:not([href="#"])').click(function() {
-//    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-//      var target = $(this.hash);
-//      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-//      if (target.length) {
-//        $('html, body').animate({
-//          scrollTop: target.offset().top
-//        }, 1000);
-//        return false;
-//      }
-//    }
-//  });
-// });

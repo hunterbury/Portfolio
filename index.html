@@ -24,28 +24,17 @@
       <div class="bar"></div>
     </label>
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul id="ul">
+        <li><a href="#home" class="scroll-trigger">Home</a></li>
+        <li><a href="#skills" class="scroll-trigger">Skills</a></li>
+        <li><a href="#portfolio" class="scroll-trigger">Portfolio</a></li>
+        <li><a href="#about" class="scroll-trigger">About</a></li>
+        <li><a href="#contact" class="scroll-trigger">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <body id="page-top">
+  <body id="home">
     <!-- Navigation-->
-    <!-- <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand"><a href="#page-top">Hunter Bury | Dev</a></li>
-            <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
-            <li class="sidebar-nav-item"><a href="#skills">Skills</a></li>
-            <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
-            <li class="sidebar-nav-item"><a href="#about">About</a></li>
-            <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
-        </ul>
-    </nav> -->
     <!-- Header-->
     <header class="masthead d-flex align-items-center">
       <div class="background">
@@ -57,108 +46,32 @@
     </header>
     <!-- Services-->
     <section class="content-section text-black text-center" id="skills">
-      <h2 class="skill-header">Skills</h2>
+      <h2 class="skill-header">SKILLS</h2>
 
       <div class="skills-wrapper">
         <h5>Languages:</h5>
         <div class="first-set animate__animated animate__pulse">
-          <img src="assets/icons/icons8-html-5.svg" alt="" loading="lazy" class="icon icon-card"><span class="tooltiptext">Tooltip text</span></img>
-          <img
-            src="assets/icons/icons8-css3.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="assets/icons/icons8-javascript.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="assets/icons/icons8-python.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
+          <img src="assets/icons/icons8-html-5.svg" alt="" loading="lazy" class="icon icon-card" data-bs-toggle="tooltip" data-bs-placement="top" title="HTML" />
+          <img src="assets/icons/icons8-css3.svg" alt="" loading="lazy" class="icon icon-card" data-bs-toggle="tooltip" data-bs-placement="top" title="CSS" />
+          <img src="assets/icons/icons8-javascript.svg" alt="" loading="lazy" class="icon icon-card" data-bs-toggle="tooltip" data-bs-placement="top" title="Javascript" />
+          <img src="assets/icons/icons8-python.svg" alt="" loading="lazy" class="icon icon-card" data-bs-toggle="tooltip" data-bs-placement="top" title="Python" />
+          <img src="assets/icons/sql-server.png" alt="" loading="lazy" class="icon icon-card" data-bs-toggle="tooltip" data-bs-placement="top" title="SQL" />
         </div>
 
         <h5>Frameworks:</h5>
         <div class="second-set animate__animated animate__pulse">
-          <img
-            src="assets/icons/icons8-django.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="assets/icons/icons8-react.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="assets/icons/icons8-bootstrap.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="assets/icons/icons8-sass.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
+          <img src="assets/icons/icons8-django.svg" alt="" loading="lazy" class="icon icon-card" data-bs-toggle="tooltip" data-bs-placement="top" title="Django" />
+          <img src="assets/icons/icons8-react.svg" alt="" loading="lazy" class="icon icon-card" data-bs-toggle="tooltip" data-bs-placement="top" title="React" />
+          <img src="assets/icons/icons8-bootstrap.svg" alt="" loading="lazy" class="icon icon-card" data-bs-toggle="tooltip" data-bs-placement="top" title="Bootstrap" />
+          <img src="assets/icons/icons8-sass.svg" alt="" loading="lazy" class="icon icon-card" data-bs-toggle="tooltip" data-bs-placement="top" title="Sass" />
         </div>
         
         <h5>Tools:</h5>
         <div class="third-set animate__animated animate__pulse">
-          <img
-            src="assets/icons/icons8-git.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="assets/icons/icons8-visual-studio-code-2019.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
+          <img src="assets/icons/icons8-git.svg" alt="" loading="lazy" class="icon icon-card" data-bs-toggle="tooltip" data-bs-placement="top" title="Git" />
+          <img src="assets/icons/icons8-visual-studio-code-2019.svg" alt="" loading="lazy" class="icon icon-card" data-bs-toggle="tooltip" data-bs-placement="top" title="Visual Studio Code" />
         </div>
       </div>
-        <!-- <div class="container px-4 px-lg-5">
-            <div class="content-section-heading">
-                <h3 class="text-secondary mb-0">Services</h3>
-                <h2 class="mb-5">What We Offer</h2>
-            </div>
-            <div class="row gx-4 gx-lg-5">
-                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                    <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
-                    <h4><strong>Responsive</strong></h4>
-                    <p class="text-faded mb-0">Looks great on any screen size!</p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                    <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
-                    <h4><strong>Redesigned</strong></h4>
-                    <p class="text-faded mb-0">Freshly redesigned for Bootstrap 5.</p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                    <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-like"></i></span>
-                    <h4><strong>Favorited</strong></h4>
-                    <p class="text-faded mb-0">
-                        Millions of users
-                        <i class="fas fa-heart"></i>
-                        Start Bootstrap!
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-mustache"></i></span>
-                    <h4><strong>Question</strong></h4>
-                    <p class="text-faded mb-0">I mustache you a question...</p>
-                </div>
-            </div>
-        </div> -->
     </section>
     <!-- Callout-->
     <section class="callout bg-primary justify-content-center">
@@ -173,22 +86,22 @@
     <section class="content-section" id="portfolio">
         <div class="container px-4 px-lg-5 mt-2">
             <div class="content-section-heading text-center">
-                <h3 class="text-secondary mb-0">Portfolio</h3>
-                <h2 class="mb-5">Recent Projects</h2>
+                <!-- <h3 class="text-secondary mb-0">Portfolio</h3> -->
+                <h2 class="mb-5">PROJECTS</h2>
             </div>
             <div class="row gx-0">
-              <div id="myBtn" class="col-lg-6">
+              <div class="modalBtn col-lg-6">
                 <a class="portfolio-item" href="#!">
-                  <div class="caption align-left slide-in">
+                  <div class="caption">
                     <div class="caption-content">
                         <div class="h2">Ecommerce App</div>
                       <span class="mb-0"><img src="assets/icons/icons8-django.svg" /></span>
                     </div>
                   </div>
-                  <img class="img-fluid align-right slide-in" src="assets/project-pics/shoeshop.png" alt="..." />
                 </a>
               </div>
-              <div id="myModal" class="modal">
+              <img class="img-fluid align-right slide-in col-lg-6" src="assets/project-pics/shoeshop.png" alt="..." />
+              <div class="modal">
                 <!-- Modal content -->
                 <div class="modal-content container">
                   <span class="close">&times;</span>
@@ -198,23 +111,36 @@
                   <a href="https://hunterbury.github.io/pomodoro/" target="_blank" class="project-link">Demo</a>
                 </div>
               </div>
-              <div class="col-lg-6">
-                  <a class="portfolio-item" href="#!">
-                      <div class="caption align-left slide-in">
-                          <div class="caption-content">
-                              <div class="h2">Notes App</div>
-                            <span class="mb-0"><img src="assets/icons/icons8-django.svg" /></span>
-                          </div>
-                      </div>
-                      <img class="img-fluid align-right slide-in" src="assets/project-pics/notesapp.png" alt="..." />
-                  </a>
+            </div>
+            <div class="row gx-0">
+              <div class="modalBtn col-lg-6">
+                <a class="portfolio-item" href="#!">
+                    <div class="caption align-left slide-in">
+                        <div class="caption-content">
+                            <div class="h2">Notes App</div>
+                          <span class="mb-0"><img src="assets/icons/icons8-django.svg" /></span>
+                        </div>
+                    </div>
+                    <img class="img-fluid align-right slide-in" src="assets/project-pics/notesapp.png" alt="..." />
+                </a>
               </div>
-              <div id="myBtn-pomodoro"class="col-lg-6">
-                  <a class="portfolio-item" href="#!">
-                      <img class="img-fluid" src="assets/project-pics/pomodoro.png" alt="..." />
-                  </a>
+              <div class="modal">
+                <!-- Modal content -->
+                <div class="modal-content container">
+                  <span class="close">&times;</span>
+                  <h2>Notes App</h2>
+                  <p>An ecommerce website built with Django, Javascript, and Sass. The site has cart functionality, uses Django models, forms, and filters.</p>
+                  <a href="https://github.com/hunterbury/ecommerce" target="_blank">Source code</a>
+                  <a href="https://hunterbury.github.io/pomodoro/" target="_blank" class="project-link">Demo</a>
+                </div>
+              </div>  
+            </div>
+            <div class="modalBtn col-lg-6">
+                <a class="portfolio-item" href="#!">
+                    <img class="img-fluid" src="assets/project-pics/pomodoro.png" alt="..." />
+                </a>
               </div>
-              <div id="myModal-pomodoro" class="modal">
+              <div class="modal">
                 <!-- Modal content -->
                 <div class="modal-content container">
                   <span class="close">&times;</span>
@@ -224,15 +150,35 @@
                   <a href="https://hunterbury.github.io/pomodoro/" target="_blank" class="project-link">Demo</a>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <div class="modalBtn col-lg-6">
                   <a class="portfolio-item" href="#!">
                       <img class="img-fluid" src="assets/project-pics/shoeshop.png" alt="..." />
                   </a>
               </div>
-              <div class="col-lg-6">
+              <div class="modal">
+                <!-- Modal content -->
+                <div class="modal-content container">
+                  <span class="close">&times;</span>
+                  <h2>Cookbook</h2>
+                  <p>An ecommerce website built with Django, Javascript, and Sass. The site has cart functionality, uses Django models, forms, and filters.</p>
+                  <a href="https://github.com/hunterbury/ecommerce" target="_blank">Source code</a>
+                  <a href="https://hunterbury.github.io/pomodoro/" target="_blank" class="project-link">Demo</a>
+                </div>
+              </div>
+              <div class="modalBtn col-lg-6">
                   <a class="portfolio-item" href="#!">
                       <img class="img-fluid" src="assets/project-pics/shoeshop.png" alt="..." />
                   </a>
+              </div>
+              <div class="modal">
+                <!-- Modal content -->
+                <div class="modal-content container">
+                  <span class="close">&times;</span>
+                  <h2>Portfolio</h2>
+                  <p>An ecommerce website built with Django, Javascript, and Sass. The site has cart functionality, uses Django models, forms, and filters.</p>
+                  <a href="https://github.com/hunterbury/ecommerce" target="_blank">Source code</a>
+                  <a href="https://hunterbury.github.io/pomodoro/" target="_blank" class="project-link">Demo</a>
+                </div>
               </div>
             </div>
         </div>
@@ -242,7 +188,7 @@
         <div class="container px-4 px-lg-5 text-center">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-10">
-                    <h2>About me</h2>
+                    <h2>ABOUT</h2>
                     <p class="lead mb-5">
                       I am a full-stack developer. I use React for the frontend, Django for the backend. I love to code and I'm constantly learning and building projects, as you can see in mt Github below.
                     </p>
@@ -253,14 +199,14 @@
     </section>
 
       <!--Section: Contact v.2-->
-    <section class="mb-4 contact">
+    <section id="contact" class="mb-4 contact">
       <!--Section heading-->
       <div class="row">
 
           <!--Grid column-->
           <div class="col-md-9 mb-md-0 mb-5">
               <form id="contact-form">
-                <h2 class="h1-responsive font-weight-bold text-center my-4">Get in touch!</h2>
+                <h2 class="h1-responsive font-weight-bold text-center my-4">CONTACT</h2>
 
                 <input type="hidden" name="contact_number">
 
@@ -371,6 +317,6 @@
                     });
             });
         }
-    </script>
+    </script>  
   </body>
 </html>

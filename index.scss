@@ -99,7 +99,7 @@ $th_dark:#2a363b;
             text-shadow:1px 1px 2px rgba(0,0,0,.5);
             
             &:hover {
-              color:$th_pink;
+              color: #0275D8;
             }
           }
         }
@@ -110,7 +110,7 @@ $th_dark:#2a363b;
   .toggle-btn {
     display:block;
     position:fixed;
-    z-index:10;
+    z-index: 1;
     right:10px;
     top:10px;
     cursor:pointer;
@@ -133,7 +133,8 @@ $th_dark:#2a363b;
     &~nav {
       opacity:1;
       visibility:visible;
-  
+      z-index: 1;
+
       ul {
         top:70px;
         
@@ -141,7 +142,7 @@ $th_dark:#2a363b;
           transform:translateY(0px);
           opacity:1;
   
-          @for $i from 1 through 4 {
+          @for $i from 1 through 5 {
               $t: $i * 0.1;
               &:nth-child(#{$i}) {
                 transition:all 0.3s cubic-bezier(.6,0,.8,1.5) #{$t}s; 
@@ -152,8 +153,9 @@ $th_dark:#2a363b;
     }
     
     &+label.toggle-btn {
+      z-index: 10;
       .bar {
-        background-color:red;
+        background-color:white;
   
         &:nth-child(2) {
           transform:translateX(50px);
@@ -267,6 +269,7 @@ h2, a {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
 }
 
 /* Modal Content/Box */
@@ -428,41 +431,49 @@ h2, a {
 //     text-align: center;
 //     margin-top: 2.5rem;
 // }
-#skills {
-  .icon {
-    .tooltiptext {
-      visibility: hidden;
-      width: 120px;
-      background-color: black;
-      color: black;
-      text-align: center;
-      padding: 5px 0;
-      border-radius: 6px;
-      
-      /* Position the tooltip text - see examples below! */
-      position: absolute;
-      z-index: 1;
-      width: 120px;
-      top: 100%;
-      left: 50%;
-      margin-left: -60px;
-    }
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .icon:hover .tooltiptext {
-    visibility: visible;
-  }
+// .skill {
+//   .tooltiptext {
+//     visibility: hidden;
+//     width: 120px;
+//     background-color: black;
+//     color: black;
+//     text-align: center;
+//     padding: 5px 0;
+//     border-radius: 6px;
+    
+//     /* Position the tooltip text - see examples below! */
+//     position: absolute;
+//     z-index: 1;
+//     width: 120px;
+//     top: 100%;
+//     left: 50%;
+//     margin-left: -60px;
+//   }
+// }
+
+// /* Show the tooltip text when you mouse over the tooltip container */
+// .skill:hover .tooltiptext {
+//   visibility: visible;
+// }
+[data-tooltip]:before {            
+  position : absolute;
+   content : attr(data-tooltip);
+   opacity : 0;
 }
-  
+
+[data-tooltip]:hover:before {        
+  opacity : 1;
+}
+
+[data-tooltip]:not([data-tooltip-persistent]):before {
+  pointer-events: none;
+}
+
 .skill-header {
     margin-bottom: 1rem;
+    align-self: center;
 }
-  
-.skills-wrapper img {
-    padding: 1.25rem;
-}
-  
+
 .icon {
     width: 11.875rem;
     height: 11.25rem;
@@ -472,8 +483,8 @@ h2, a {
     background-color: #fff;
     border-radius: 11px;
     box-shadow: 0 3px 10px var(--secondary-shadow);
-    padding: 20px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
 }
 
 .main-container {

@@ -44,13 +44,13 @@
 }
 
 #burger nav ul li a:hover {
-  color: #E84A5F;
+  color: #0275D8;
 }
 
 .toggle-btn {
   display: block;
   position: fixed;
-  z-index: 10;
+  z-index: 1;
   right: 10px;
   top: 10px;
   cursor: pointer;
@@ -74,6 +74,7 @@
 #toggle:checked ~ nav {
   opacity: 1;
   visibility: visible;
+  z-index: 1;
 }
 
 #toggle:checked ~ nav ul {
@@ -106,8 +107,17 @@
   transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.4s;
 }
 
+#toggle:checked ~ nav ul li:nth-child(5) {
+  -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.5s;
+  transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.5s;
+}
+
+#toggle:checked + label.toggle-btn {
+  z-index: 10;
+}
+
 #toggle:checked + label.toggle-btn .bar {
-  background-color: red;
+  background-color: white;
 }
 
 #toggle:checked + label.toggle-btn .bar:nth-child(2) {
@@ -274,37 +284,25 @@ body {
   cursor: pointer;
 }
 
-#skills {
-  /* Show the tooltip text when you mouse over the tooltip container */
-}
-
-#skills .icon .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: black;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  /* Position the tooltip text - see examples below! */
+[data-tooltip]:before {
   position: absolute;
-  z-index: 1;
-  width: 120px;
-  top: 100%;
-  left: 50%;
-  margin-left: -60px;
+  content: attr(data-tooltip);
+  opacity: 0;
 }
 
-#skills .icon:hover .tooltiptext {
-  visibility: visible;
+[data-tooltip]:hover:before {
+  opacity: 1;
+}
+
+[data-tooltip]:not([data-tooltip-persistent]):before {
+  pointer-events: none;
 }
 
 .skill-header {
   margin-bottom: 1rem;
-}
-
-.skills-wrapper img {
-  padding: 1.25rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .icon {
@@ -317,8 +315,8 @@ body {
   border-radius: 11px;
   -webkit-box-shadow: 0 3px 10px var(--secondary-shadow);
           box-shadow: 0 3px 10px var(--secondary-shadow);
-  padding: 20px;
-  margin: 10px;
+  padding: 5px;
+  margin: 5px;
 }
 
 .main-container {
