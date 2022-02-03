@@ -1,62 +1,3 @@
-// @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
-
-// @mixin vertical-align {
-//     position: relative;
-//     top: 50%;
-//     -webkit-transform: translateY(-50%);
-//     -ms-transform: translateY(-50%);
-//     transform: translateY(-50%);
-// }
-
-// @mixin transition {
-//     -moz-transition:    0.3s ease-in-out all;
-//     -o-transition:      0.3s ease-in-out all;
-//     -webkit-transition: 0.3s ease-in-out all;
-//     transition:         0.3s ease-in-out all;
-// }
-
-// @mixin filter($filter) {
-//    -webkit-filter: $filter;
-//    -moz-filter: $filter;
-//    -o-filter: $filter;
-// }
-
-// $sm: 480px;
-// $md: 768px;
-// $lg: 992px;
-
-// :root {
-//     --font-family: "Roboto", sans-serf;
-//     --normal-font: 400;
-//     --bold-font: 700;
-//     --bolder-font: 900;
-//     --bg-color: #0c0a0a;
-//     --primary-color: #79b3f5;
-//     --secondary-color: #ff7235;
-//     --primary-shadow: #8b8eaf;
-//     --secondary-shadow: #a17a69;
-//     --bottom-margin: 0.5rem;
-//     --bottom-margin-2: 1rem;
-//     --line-height: 1.7rem;
-//     --transition: 0.3s;
-// }
-
-// html, body {
-//     scroll-behavior: smooth;
-//     font-family: var(--font-family);
-//     background: #ECE9E6;  /* fallback for old browsers */
-//     background: -webkit-linear-gradient(to top, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-//     background: linear-gradient(to top, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-//         }
-
-// * {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//     color: white;
-//     // background-color: var(--bg-color);
-// }
-
 // /* nav bar */
 $th_pink:#E84A5F;
 $th_dark:#2a363b;
@@ -174,7 +115,13 @@ $th_dark:#2a363b;
   }
 
 body {
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
+}
+
+section {
+  width: 100%;
 }
 
 .masthead {
@@ -191,11 +138,10 @@ body {
     margin-top: 50%;
     margin-bottom: 50%;
   }
-  // content: "";
-  // position: absolute;
-  // top: 0; left: 0;
-  // width: 100vw; height: 100vh;
-  // filter: grayscale(100%);
+  
+  .landing-content {
+    top: 50%;
+  }
 }
 
 #name {
@@ -214,13 +160,14 @@ to { width: 100% }
 }
 
 .callout {
-height: 10vh;
-h2, a {
-  align-self: center;
-  justify-self: center;
+  height: 10vh;
+  .container {
+    margin-top: auto;
+    h2, a {
+      margin: auto;
+    }
+  }
 }
-}
-
 // .site-wrap {
 // 	max-width: 700px;
 // 	margin: 100px auto;
@@ -228,6 +175,10 @@ h2, a {
 // 	padding: 40px;
 // 	text-align: justify;
 // }
+
+#portfolio {
+  padding-top: 70px;
+}
 
 .align-left {
 	float: left;
@@ -257,6 +208,10 @@ h2, a {
 	transform: translateX(0%) scale(1);
 }
 
+.modalBtn {
+  cursor: pointer;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -278,11 +233,22 @@ h2, a {
   margin: 5% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  height: 80%;
+  width: 90%; /* Could be more or less, depending on screen size */
+  height: 90%;
+  position: relative;
   h2 {
     align-self: center;
   }
+  .links {
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+    padding-bottom: 20px;
+    a {
+      margin: 5px;
+    }
+  }
+
   
 }
 
@@ -299,6 +265,13 @@ h2, a {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.carousel-item {
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 // ul {
 //     list-style-type: none;
