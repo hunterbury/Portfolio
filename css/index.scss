@@ -131,6 +131,11 @@ section {
     background: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80);
     background-size: cover;
     background-position: center;  
+    .landing-content {
+      margin-top: 0%;
+      align-self: center;
+      padding-left: 5%;
+    }
   }
 
   .container {
@@ -139,9 +144,6 @@ section {
     margin-bottom: 50%;
   }
   
-  .landing-content {
-    top: 50%;
-  }
 }
 
 #name {
@@ -258,6 +260,7 @@ to { width: 100% }
   float: right;
   font-size: 28px;
   font-weight: bold;
+  margin-right: 0;
 }
 
 .close:hover,

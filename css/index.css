@@ -154,14 +154,18 @@ section {
   background-position: center;
 }
 
+.masthead .background .landing-content {
+  margin-top: 0%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 5%;
+}
+
 .masthead .container {
   padding-left: 20px;
   margin-top: 50%;
   margin-bottom: 50%;
-}
-
-.masthead .landing-content {
-  top: 50%;
 }
 
 #name {
@@ -307,6 +311,7 @@ section {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  margin-right: 0;
 }
 
 .close:hover,
