@@ -23,4 +23,4 @@ My portfolio was created with HTML, JavaScript, Sass, and Bootstrap.
 
 ## Demo
 
-https://github.com/hunterbury/portfolio
+https://hunterbury.github.io/Portfolio/
