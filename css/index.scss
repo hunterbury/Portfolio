@@ -279,6 +279,7 @@ to { width: 100% }
   position: relative;
   h2 {
     align-self: center;
+    margin-bottom: 2%;
   }
   .links {
     position: absolute;
@@ -289,8 +290,25 @@ to { width: 100% }
       margin: 5px;
     }
   }
+  p {
+    align-self: center;
+    width: 80%;
+  }
+}
 
-  
+.carousel {
+  padding-top: 5%;
+}
+
+.carouselImage {
+  width: auto;
+  height: 400px;
+  max-height: 400px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
 }
 
 /* The Close Button */

@@ -341,6 +341,7 @@ section {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin-bottom: 2%;
 }
 
 .modal-content .links {
@@ -354,6 +355,29 @@ section {
 
 .modal-content .links a {
   margin: 5px;
+}
+
+.modal-content p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 80%;
+}
+
+.carousel {
+  padding-top: 5%;
+}
+
+.carouselImage {
+  width: auto;
+  height: 400px;
+  max-height: 400px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 /* The Close Button */
