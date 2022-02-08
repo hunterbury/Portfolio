@@ -69,6 +69,13 @@ function checkSlide(e) {
 
 window.addEventListener('scroll', debounce(checkSlide));
 
+const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce))");
+const details = document.querySelector(".object-and-details > details");
+
+if (mediaQuery.matches) {
+  details.removeAttribute("open");
+}
+
 //contact form submission confirmation
 const submit = document.querySelector('#submit');
 const delay = ms => new Promise(res => setTimeout(res, ms));

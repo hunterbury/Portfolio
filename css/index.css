@@ -190,18 +190,13 @@ section {
 
 #name {
   overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
   white-space: nowrap;
-  /* Keeps the content on a single line */
   margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em;
-  /* Adjust as needed */
   -webkit-animation: typing 3.5s steps(30, end);
           animation: typing 3.5s steps(30, end);
 }
 
-/* The typing effect */
 @-webkit-keyframes typing {
   from {
     width: 0;
@@ -210,6 +205,7 @@ section {
     width: 100%;
   }
 }
+
 @keyframes typing {
   from {
     width: 0;
@@ -302,37 +298,25 @@ section {
   cursor: pointer;
 }
 
-/* The Modal (background) */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: black;
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto;
-  /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 90%;
-  /* Could be more or less, depending on screen size */
   height: 90%;
   position: relative;
 }
@@ -351,16 +335,23 @@ section {
       -ms-grid-row-align: center;
       align-self: center;
   padding-bottom: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .modal-content .links a {
   margin: 5px;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .modal-content p {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
   width: 80%;
 }
 
@@ -380,7 +371,6 @@ section {
           filter: invert(100%);
 }
 
-/* The Close Button */
 .close {
   color: #aaa;
   float: right;
@@ -399,6 +389,74 @@ section {
 .carousel-item img {
   margin-left: auto;
   margin-right: auto;
+}
+
+.object-and-details {
+  display: inline-block;
+  position: relative;
+}
+
+summary {
+  color: #fff;
+  background: #000;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  border-radius: 50%;
+  background-image: url("https://assets.codepen.io/128034/play_circle_filled-24px.svg");
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
+
+[open] summary {
+  background-image: url("https://assets.codepen.io/128034/pause_circle_filled-24px.svg");
+  -webkit-box-shadow: 0 0 0 2px #fff;
+          box-shadow: 0 0 0 2px #fff;
+  background-color: white;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary:first-of-type {
+  list-style: none;
+}
+
+summary + * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  padding-top: 3rem;
+  background: #000;
+  color: #fff;
+  overflow-y: auto;
+}
+
+summary + * a {
+  color: #fff;
+}
+
+summary:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem #aade87;
+          box-shadow: 0 0 0 0.25rem #aade87;
+  outline: transparent;
+}
+
+.object-and-details1 img {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: visible;
 }
 
 [data-tooltip]:before {
