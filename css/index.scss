@@ -269,26 +269,37 @@ to { width: 100% }
     align-self: center;
     margin-bottom: 2%;
   }
+  .description {
+    align-self: center;
+    justify-self: center;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
   .links {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     align-self: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     justify-content: center;
     a {
       margin: 5px;
       justify-self: center;
     }
   }
-  p {
-    align-self: center;
+  .heroku {
+    position: absolute;
+    bottom: 0;
     justify-self: center;
-    width: 80%;
+    align-self: center;
+    margin-top: 10px;
+    p {
+      justify-self: center;
+    }
   }
 }
 
 .carousel {
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .carouselImage {

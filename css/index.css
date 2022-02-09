@@ -328,13 +328,23 @@ section {
   margin-bottom: 2%;
 }
 
-.modal-content .links {
-  position: absolute;
-  bottom: 0;
+.modal-content .description {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding-bottom: 20px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.modal-content .links {
+  position: absolute;
+  bottom: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-bottom: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -346,17 +356,24 @@ section {
       justify-self: center;
 }
 
-.modal-content p {
+.modal-content .heroku {
+  position: absolute;
+  bottom: 0;
+  -ms-grid-column-align: center;
+      justify-self: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin-top: 10px;
+}
+
+.modal-content .heroku p {
   -ms-grid-column-align: center;
       justify-self: center;
-  width: 80%;
 }
 
 .carousel {
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .carouselImage {
