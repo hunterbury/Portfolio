@@ -19,6 +19,9 @@ My portfolio was created with HTML, JavaScript, Sass, and Bootstrap.
 ## Screenshots
 
 ![App Screenshot](assets/project-pics/portfolio.png)
+![App Screenshot](assets/project-pics/portfolio-projects.png)
+![App Screenshot](assets/project-pics/portfolio-skills.png)
+
 
 
 ## Demo
