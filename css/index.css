@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   opacity: 0;
   visibility: hidden;
@@ -51,8 +51,8 @@
   display: block;
   position: fixed;
   z-index: 1;
-  right: 10px;
-  top: 10px;
+  right: 2%;
+  top: 2%;
   cursor: pointer;
 }
 
@@ -137,7 +137,7 @@
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   min-width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -215,9 +215,16 @@ section {
   }
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 800px) {
+  .background {
+    background: rgba(255, 255, 255, 0.25);
+  }
   #name {
-    overflow-wrap: break-word;
+    color: #000;
+    overflow: hidden;
+    white-space: normal;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 
@@ -304,11 +311,13 @@ section {
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   overflow: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .modal-content {
@@ -340,7 +349,7 @@ section {
 
 .modal-content .links {
   position: absolute;
-  bottom: 20px;
+  bottom: 5%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -364,12 +373,21 @@ section {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-top: 10px;
+  margin-top: 2%;
 }
 
 .modal-content .heroku p {
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .modal {
+    bottom: 50vw;
+  }
+  .modal-content {
+    height: 75%;
+  }
 }
 
 .carousel {
@@ -378,8 +396,9 @@ section {
 
 .carouselImage {
   width: auto;
-  height: 400px;
+  height: 100%;
   max-height: 400px;
+  max-width: 100%;
 }
 
 .carousel-control-next,
